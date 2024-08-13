@@ -123,8 +123,7 @@ const DragAndDropExample = () => {
   };
 
   const handleNextButtonClick = () => {
-    debugger
-   
+    
     setDestinationBoxItems((prevItems) =>
       prevItems.filter((item) =>
         (currentView === 3 && !["3", "4", "5", "6"].some(prefix => item.id.startsWith(prefix))) ||
@@ -151,7 +150,7 @@ const DragAndDropExample = () => {
     setActiveTab(currentView === 3 ? "productlist" : currentView === 4 ? "Productdetail" : "header");
   };
   const handlePreviousButtonClick = () => {
-    debugger
+    
     console.log(home);
     if(activeTab==="Productdetail"){
       setDestinationBoxItems(productlist);
