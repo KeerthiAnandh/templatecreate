@@ -1,13 +1,15 @@
 "use client";
+import Homebanner from "@/signin-component/HomeBanner";
 import React from "react";
-import DragAndDropExample from "../templete-creation/TempleteCreation";
-import { ProductDetails } from "@/config/strapi.config/productDetails/ProductDestils";
+// import DragAndDropExample from "../templete-creation/TempleteCreation";
+
 
 const HomePage = () => {
   
   return (
     <>
-      <DragAndDropExample />
+      {/* <DragAndDropExample /> */}
+      <Homebanner/>
     </>
   );
 };

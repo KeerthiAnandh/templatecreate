@@ -9,6 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^5.16.7",
+    "@mui/material": "^5.16.7",
+    "genpixels_ui_components": "^0.0.3",
     "next": "14.2.4",
     "react": "^18",
     "react-beautiful-dnd-next": "^11.0.5",

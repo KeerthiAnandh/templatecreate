@@ -1,8 +1,11 @@
+// src/page-component/templete-creation/helper-comonent/types.ts
+
 export interface Item {
   id: string;
   content: string;
   imageUrl: string;
-  showDeleteButton?: boolean;
+  type: string;
+  value:string;
 }
 
 export type ItemsMap = {
@@ -10,5 +13,5 @@ export type ItemsMap = {
   body: Item[];
   footer: Item[];
   productlist: Item[];
-  Productdetail : Item[]
+  Productdetail: Item[];
 };
