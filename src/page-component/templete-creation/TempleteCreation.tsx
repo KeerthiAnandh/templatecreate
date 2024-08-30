@@ -70,8 +70,8 @@ const DragAndDropExample = () => {
 
   const getPageNumber = () => currentView - 2;
 
-  const deploybutton = (items: Item[], type: string) =>
-    items.some((item: Item) => item.type === type);
+  const deploybutton = (items:any, type: string) =>
+    items.some((item:any) => item.type === type);
 
   const isDeployable = Object.values(destinationBoxItems).some((items: Item[]) => 
     deploybutton(items, 'header') && deploybutton(items, 'footer')
