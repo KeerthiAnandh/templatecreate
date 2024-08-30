@@ -4,65 +4,65 @@ export const initialItems: ItemsMap = {
   header: [
     {
       id: "1",
-      content: "Header 1",
+      content: "Header",
       imageUrl: "images/header.png",
     },
     {
       id: "2",
-      content: "Header 2",
+      content: "Header",
       imageUrl: "images/header.png",
     },
   ],
   body: [
     {
-      id: "3",
-      content: "Body 1",
+      id: "1",
+      content: "Body",
       imageUrl: "images/landing.png",
     },
     {
-      id: "4",
-      content: "Body 2",
+      id: "2",
+      content: "Body",
       imageUrl: "images/browseRange.png",
     },
     {
-      id: "5",
-      content: "Body 3",
+      id: "3",
+      content: "Body",
       imageUrl: "images/inspirations.png",
     },
     {
-      id: "6",
-      content: "Body 4",
+      id: "4",
+      content: "Body",
       imageUrl: "images/ourProducts.png",
     },
   ],
   footer: [
     {
-      id: "7",
-      content: "Footer 1",
+      id: "1",
+      content: "Footer",
       imageUrl: "images/footer.png",
     },
   ],
   productlist : [
     {
-      id: "8",
-      content: "Product 1",
+      id: "1",
+      content: "Product",
       imageUrl: "images/filter.png",
     },
     {
-      id: "9",
-      content: "Product 2",
+      id: "2",
+      content: "Product",
       imageUrl: "images/pro.png",
     }
   ],
   Productdetail :[
     {
-      id:"10",
-      content: "desc 1",
+      id:"1",
+      content: "desc",
       imageUrl: "images/descp0.png",
     },
     {
-      id:"11",
-      content: "desc 2",
+      id:"2",
+      content: "desc",
       imageUrl: "images/descp.png",
     }
   ]
