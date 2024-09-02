@@ -57,4 +57,6 @@ export const FormContainer = styled(Box)`
 
 export const FormTextField = styled(FormInput)`
   width: 100%;
+  line-height: 21px;
+  margin-bottom:20%;
 `;

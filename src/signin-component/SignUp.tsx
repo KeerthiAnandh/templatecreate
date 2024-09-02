@@ -1,17 +1,16 @@
-// SignUp.tsx
-
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { EMAIL_REGEX, PASSWORD_REGEX } from 'genpixels_ui_components/src/ui-components/forms/regex';
 import FormPassword from 'genpixels_ui_components/src/ui-components/forms/input-password';
 import FormPhoneNumberInput from 'genpixels_ui_components/src/ui-components/forms/input-phone-number';
 import { FormTextField } from './HomeBanner.style';
+import { postData } from '../service/authservice';
 
 const defaultValue = {
-    name: '',
+    lastName: '',
+    firstname: '',
     email: '',
     password: '',
-    confirmPassword: '',
     phoneNumber: ''
 };
 
@@ -19,7 +18,6 @@ const SignUp = () => {
     const {
         control,
         handleSubmit,
-        watch,
         formState: { dirtyFields, errors }
     } = useForm({
         defaultValues: defaultValue,
@@ -27,19 +25,33 @@ const SignUp = () => {
         shouldFocusError: true
     });
 
-    const passwordValue = watch('password');
+    const onSubmit = async (data: any) => {
+        try {
+            const newData = { 
+                firstName: data.firstname, 
+                lastName: data.lastName, 
+                email: data.email, 
+                password: data.password, 
+                phoneNumber: data.phoneNumber 
+            };
+            
+            // Save user data to local storage
+            localStorage.setItem('userData', JSON.stringify(newData));
 
-    const onSubmit = (data: any) => {
-        console.log("Form Data: ", data);
+            const response = await postData("http://e-commerce.ap-south-1.elasticbeanstalk.com/api/users/signup", newData);
+            console.log("Post Response:", response);
+        } catch (error: any) {
+            console.error("Error posting data:", error.message);
+        }
     };
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>
-            <h1>Forms</h1>
+            <h3>Sign Up Here</h3>
             <div>
-                <label>Name</label>
+                <label>First Name</label>
                 <FormTextField
-                    name="name"
+                    name="firstname"
                     control={control}
                     rules={{
                         required: {
@@ -47,8 +59,23 @@ const SignUp = () => {
                             message: 'Kindly enter your Name'
                         }
                     }}
-                    showCheckIcon={!errors.name && dirtyFields.name}
-                    errorText={errors?.name?.message}
+                    showCheckIcon={!errors.firstname && dirtyFields.firstname}
+                    errorText={errors?.firstname?.message}
+                />
+            </div>
+            <div>
+                <label>Last Name</label>
+                <FormTextField
+                    name="lastName"
+                    control={control}
+                    rules={{
+                        required: {
+                            value: true,
+                            message: 'Kindly enter your Name'
+                        }
+                    }}
+                    showCheckIcon={!errors.lastName && dirtyFields.lastName}
+                    errorText={errors?.lastName?.message}
                 />
             </div>
             <div>
@@ -86,22 +113,6 @@ const SignUp = () => {
                         }
                     }}
                     errorText={errors?.password?.message}
-                />
-            </div>
-            <div>
-                <label>Confirm Password</label>
-                <FormPassword
-                    name="confirmPassword"
-                    control={control}
-                    rules={{
-                        required: {
-                            value: true,
-                            message: 'Kindly enter your Password again'
-                        },
-                        validate: (value: string) =>
-                            value === passwordValue || 'Confirm Password do not match'
-                    }}
-                    errorText={errors?.confirmPassword?.message}
                 />
             </div>
             <div>

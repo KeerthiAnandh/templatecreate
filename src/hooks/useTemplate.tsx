@@ -1,5 +1,6 @@
+'use client';
 import { useState } from "react";
-import { Item, ItemsMap } from "@/page-component/templete-creation/types";
+import { Item,ItemsMap } from "@/page-component/template/types";
 import { initialItems } from "@/config/DragDrop";
 // import { createStrapiCollection } from "@/service/Service";
 // import { FooterCollections } from "@/config/strapi.config/footer.config";

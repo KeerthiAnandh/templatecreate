@@ -1,4 +1,4 @@
-import { ItemsMap } from "@/page-component/templete-creation/types";
+import { ItemsMap } from "@/page-component/template/types";
 
 export const initialItems: ItemsMap = {
   header: [
