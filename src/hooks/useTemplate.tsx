@@ -32,6 +32,7 @@ const useTemplate = () => {
   };
 
   const handleDestinationBoxDrop = (source: any, destination: any) => {
+    debugger
     const currentItems = destinationBoxItems[currentView] || [];
     let newItems:any = Array.from(currentItems);
 
@@ -49,6 +50,7 @@ const useTemplate = () => {
 
   const createDraggedItem = (source: any): Item => {
     const item = items[activeTab][source.index];
+    
     return { ...item, id: `${item.id}-${Date.now()}` };
   };
 
