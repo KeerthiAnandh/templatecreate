@@ -1,4 +1,5 @@
-export const HeaderCollections = {
+export const HeaderCollections = 
+{
   header1: {
     logo: "Logo1 imageData",
     NavMenu: {
@@ -17,7 +18,7 @@ export const HeaderCollections = {
     logo: "Logo2 imageData",
     NavMenu: {
       Home: "HomeData",
-      Shop: "ShopData",
+      Shop: "ShopData", 
       About: "AboutData",
       Contact: "ContactData",
     },

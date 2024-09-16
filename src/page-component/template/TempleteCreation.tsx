@@ -1,5 +1,4 @@
 //TempleteCreation.tsx
-
 import React from "react";
 import { DragDropContext } from "react-beautiful-dnd-next";
 import Box from "@mui/material/Box";
@@ -16,7 +15,11 @@ import { IoClose } from "react-icons/io5";
 import { DraggableItem } from "./TempleteCreation.style";
 import { Item } from "./types";
 import { Draggable } from "react-beautiful-dnd-next";
- 
+import { createStrapiCollection } from "@/service/Service";
+import { BodyCollections } from "@/config/strapi.config/body.config";
+import { HeaderCollections } from "@/config/strapi.config/header.config";
+import { FooterCollections } from "@/config/strapi.config/footer.config";
+
 const DragAndDropExample = () => {
   const {
     items,
@@ -58,39 +61,83 @@ const DragAndDropExample = () => {
   );
 
   const getVisibleTabs = () => {
-    switch (currentView) {
-      case 3:
-        return ["header", "body", "footer"];
-      case 4:
-        return ["productlist"];
-      case 5:
-        return ["Productdetail"];
-      default:
-        return [];
-    }
+    const tabMap: { [key: number]: string[] } = {
+      3: ["header", "body", "footer"],
+      4: ["productlist"],
+      5: ["Productdetail"],
+    };
+
+    return tabMap[currentView] || [];
   };
 
   const getPageNumber = () => currentView - 2;
 
-  const deploybutton = (items:any, type: string) =>
-    items.some((item:any) => item.type === type);
+  const getFormData = (items: any, collections: any) =>
+    items.map((item: any) => {
+      debugger
+      const key = item.content1.toLowerCase().replace(" ", "");
+      return collections[key as keyof typeof collections];
+    });
 
-  const isDeployable = Object.values(destinationBoxItems).some((items: Item[]) => 
-    deploybutton(items, 'header') && deploybutton(items, 'footer')
-  );
-  
-  const handleDeploy = () => {
-    if (isDeployable) {
-      console.log("Deployed!");
-    } else {
-      console.log("Deployment failed: Header and Footer are required.");
-    }
+  const handleDeploy = async () => {
+    debugger
+      try 
+      {
+    const headers: any = getFormData(
+      destinationBoxItems[3].filter(
+        (item: any) => item.content === "Header"
+      ),
+      HeaderCollections
+    );
+
+    const bodies = getFormData(
+      destinationBoxItems[3].filter(
+        (item: any) =>
+          item.content === "Body"
+      ),
+      BodyCollections
+    );
+        const footers = getFormData(
+          destinationBoxItems[3].filter(
+            (item:any) => item.content==="Footer"
+          ),
+          FooterCollections
+        );
+
+        // const productlist = getFormData(
+        //   destinationBoxItems[4].filter(
+        //     (item:any) => item.content==="Productlist"
+        //   ),
+        //   FooterCollections
+        // );
+
+        // const Productdetail = getFormData(
+        //   destinationBoxItems[5].filter(
+        //     (item:any) => item.content==="Productdetail"
+        //   ),
+        //   ProductDetailsCollections
+        // );
+        
+    const formData =
+    {
+      header: headers.length > 0 ? headers[0] : null,
+      body: bodies,
+      footer: footers.length > 0 ? footers[0] : null,
+      // productlist: bodies,
+      // Productdetail:Productdetail,
+    };
+
+    await createStrapiCollection(formData);
+        } 
+        catch (error)
+       {
+        console.error("Error creating eCommerce data:", error);
+      }
   };
-
   const renderDeployButton = () => (
     <Pagenumber>
       Page {getPageNumber()}
-      <DeployButton onClick={handleDeploy} disabled={!isDeployable}>
+      <DeployButton onClick={handleDeploy} >
         Deploy
       </DeployButton>
     </Pagenumber>

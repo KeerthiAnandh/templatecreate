@@ -1,4 +1,4 @@
-const API_URL = "https://e-commerce-templete-strapi.onrender.com/api/e-commerces";
+const API_URL = "http://e-commerce-gen.com/v1/e-commerces";
 
 
 export const createStrapiCollection = async (formData: any) => {
@@ -23,3 +23,5 @@ export const createStrapiCollection = async (formData: any) => {
     throw error; 
   }
 };
+
+

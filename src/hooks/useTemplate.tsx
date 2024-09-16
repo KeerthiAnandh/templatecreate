@@ -12,7 +12,7 @@ type Tab = (typeof TABS)[number];
 const useTemplate = () => {
   const [items, setItems] = useState<ItemsMap>(initialItems);
   const [defaults, setDefaults] = useState<Item[]>([]);
-  const [destinationBoxItems, setDestinationBoxItems] = useState<{ [key: number]: Item[] }>({ 3: [], 4: [], 5: [] });
+  const [destinationBoxItems, setDestinationBoxItems] = useState<any>({ 3: [], 4: [], 5: [] })
   const [activeTab, setActiveTab] = useState<Tab>("header");
   const [currentView, setCurrentView] = useState<number>(3);
   const [lastViewState, setLastViewState] = useState<{ [key: number]: Tab }>({});
@@ -33,7 +33,7 @@ const useTemplate = () => {
 
   const handleDestinationBoxDrop = (source: any, destination: any) => {
     const currentItems = destinationBoxItems[currentView] || [];
-    let newItems = Array.from(currentItems);
+    let newItems:any = Array.from(currentItems);
 
     if (source.droppableId === "destination-box") {
       const [reorderedItem] = newItems.splice(source.index, 1);
@@ -43,8 +43,8 @@ const useTemplate = () => {
       newItems.splice(destination.index, 0, draggedItem);
     }
 
-    setDefaults(newItems.filter(item => item.content === "Header" || item.content === "Footer"));
-    setDestinationBoxItems(prev => ({ ...prev, [currentView]: reorderItems(newItems) }));
+    setDefaults(newItems.filter((item: { content: string; }) => item.content === "Header" || item.content === "Footer"));
+    setDestinationBoxItems((prev: any) => ({ ...prev, [currentView]: reorderItems(newItems) }));
   };
 
   const createDraggedItem = (source: any): Item => {
@@ -61,7 +61,7 @@ const useTemplate = () => {
 
   const handleNextButtonClick = () => {
     if (currentView === 3) {
-      setDestinationBoxItems(prevState => ({
+      setDestinationBoxItems((prevState: any[][]) => ({
         ...prevState,
         4: [
           ...prevState[4].filter(item => item.content !== "Header" && item.content !== "Footer"),
@@ -95,7 +95,7 @@ const useTemplate = () => {
   };
 
   const handleRemoveItem = (itemId: string, source: "source" | "destination") => {
-    const itemToDelete = destinationBoxItems[currentView].find(item => item.id === itemId);
+    const itemToDelete = destinationBoxItems[currentView].find((item: { id: string; }) => item.id === itemId);
 
     if (itemToDelete && (itemToDelete.content === "Header" || itemToDelete.content === "Footer")) {
       setDeletedItems(prev => [...prev, itemToDelete]);
@@ -107,53 +107,53 @@ const useTemplate = () => {
         [activeTab]: prevItems[activeTab].filter(item => item.id !== itemId),
       }));
     } else if (source === "destination") {
-      setDestinationBoxItems(prev => ({
+      setDestinationBoxItems((prev: any[][]) => ({
         ...prev,
         [currentView]: prev[currentView].filter(item => item.id !== itemId),
       }));
     }
   };
-   const getFormData = (items: Item[], collections: any) =>
-      items.map((item) => {
-        const key = item.content.toLowerCase().replace(" ", "");
-        return collections[key as keyof typeof collections];
-      });
+  //  const getFormData = (items: Item[], collections: any) =>
+  //     items.map((item) => {
+  //       const key = item.content.toLowerCase().replace(" ", "");
+  //       return collections[key as keyof typeof collections];
+  //     });
       
-  // const handleDeploy = async () =>
-  //    {
-  //   try 
-  //   {
-  //     const headers = getFormData(
-  //       destinationBoxItems.filter(
-  //         (item) => item.id.startsWith("1") || item.id.startsWith("2")
-  //       ),
-  //       HeaderCollections
-  //     );
-  //     const bodies = getFormData(
-  //       destinationBoxItems.filter((item) =>
-  //         ["1", "2", "3", "4"].some((prefix) => item.id.startsWith(prefix))
-  //       ),
-  //       BodyCollections
-  //     );
-  //     const footers = getFormData(
-  //       destinationBoxItems.filter((item) => item.id.startsWith("1")),
-  //       FooterCollections
-  //     );
+  // // const handleDeploy = async () =>
+  // //    {
+  // //   try 
+  // //   {
+  // //     const headers = getFormData(
+  // //       destinationBoxItems.filter(
+  // //         (item) => item.id.startsWith("1") || item.id.startsWith("2")
+  // //       ),
+  // //       HeaderCollections
+  // //     );
+  // //     const bodies = getFormData(
+  // //       destinationBoxItems.filter((item) =>
+  // //         ["1", "2", "3", "4"].some((prefix) => item.id.startsWith(prefix))
+  // //       ),
+  // //       BodyCollections
+  // //     );
+  // //     const footers = getFormData(
+  // //       destinationBoxItems.filter((item) => item.id.startsWith("1")),
+  // //       FooterCollections
+  // //     );
 
-  //     const formData = 
-  //     {
-  //       header: headers.length > 0 ? headers[0] : null,
-  //       body: bodies,
-  //       footer: footers.length > 0 ? footers[0] : null,
-  //     };
+  // //     const formData = 
+  // //     {
+  // //       header: headers.length > 0 ? headers[0] : null,
+  // //       body: bodies,
+  // //       footer: footers.length > 0 ? footers[0] : null,
+  // //     };
 
-  //     await createStrapiCollection(formData);
-  //     } 
-  //     catch (error)
-  //    {
-  //     console.error("Error creating eCommerce data:", error);
-  //   }
-  // };
+  // //     await createStrapiCollection(formData);
+  // //     } 
+  // //     catch (error)
+  // //    {
+  // //     console.error("Error creating eCommerce data:", error);
+  // //   }
+  // // };
   return {
     items,
     defaults,
