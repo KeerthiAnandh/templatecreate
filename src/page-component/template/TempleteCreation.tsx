@@ -1,5 +1,5 @@
 //TempleteCreation.tsx
-import React from "react";
+import React, { useEffect } from "react";
 import { DragDropContext } from "react-beautiful-dnd-next";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
@@ -20,6 +20,8 @@ import { BodyCollections } from "@/config/strapi.config/body.config";
 import { HeaderCollections } from "@/config/strapi.config/header.config";
 import { FooterCollections } from "@/config/strapi.config/footer.config";
 
+// const LOCAL_STORAGE_KEY = 'drag_and_drop_state';
+
 const DragAndDropExample = () => {
   const {
     items,
@@ -32,7 +34,23 @@ const DragAndDropExample = () => {
     handleNextButtonClick,
     handlePreviousButtonClick,
     handleRemoveItem,
+    setDefaults,
+    setDestinationBoxItems
   } = useTemplate();
+
+  useEffect(() => {
+    // Retrieve the last saved state from local storage on component mount
+    const savedState = localStorage.getItem("drag_and_drop_state");
+    if (savedState) {
+      setDestinationBoxItems(JSON.parse(savedState));
+      setDefaults(JSON.parse(savedState)[3].filter((item: { content: string; }) => item.content === "Header" || item.content === "Footer"))
+    }
+  }, []);
+
+  // const saveStateToLocalStorage = () => {
+  //   // Save current destinationBoxItems to local storage
+  //   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(destinationBoxItems));
+  // };
 
   const renderDraggableItem = (item: Item, index: number, source: "source" | "destination") => (
     <Draggable draggableId={item.id} index={index}>
@@ -126,7 +144,9 @@ const DragAndDropExample = () => {
       // productlist: bodies,
       // Productdetail:Productdetail,
     };
-
+    localStorage.setItem("drag_and_drop_state", JSON.stringify(destinationBoxItems));
+    // saveStateToLocalStorage();
+    
     await createStrapiCollection(formData);
         } 
         catch (error)

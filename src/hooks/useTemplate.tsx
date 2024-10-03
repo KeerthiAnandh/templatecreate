@@ -6,6 +6,7 @@ import { initialItems } from "@/config/DragDrop";
 // import { FooterCollections } from "@/config/strapi.config/footer.config";
 // import { BodyCollections } from "@/config/strapi.config/body.config";
 // import { HeaderCollections } from "@/config/strapi.config/header.config";
+// import { HeaderCollections } from "@/config/strapi.config/header.config";
 const TABS = ["header", "body", "footer", "productlist", "Productdetail"] as const;
 type Tab = (typeof TABS)[number];
 
@@ -75,6 +76,10 @@ const useTemplate = () => {
         ],
       }));
     }
+    // const savedState = localStorage.getItem("drag_and_drop_state");
+    // if (savedState) {
+    //   setDestinationBoxItems(JSON.parse(savedState));
+    // }
     saveCurrentViewState();
     setCurrentView(prevView => Math.min(prevView + 1, 5));
     setActiveTab(currentView === 3 ? "productlist" : currentView === 4 ? "Productdetail" : "header");
@@ -163,11 +168,13 @@ const useTemplate = () => {
     activeTab,
     currentView,
     deletedItems,
+    setDefaults,
     handleTabChange,
     onDragEnd,
     handleNextButtonClick,
     handlePreviousButtonClick,
     handleRemoveItem,
+    setDestinationBoxItems,
     // handleDeploy,
   };
 };
