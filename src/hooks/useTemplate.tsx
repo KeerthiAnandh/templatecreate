@@ -6,6 +6,7 @@ import { initialItems } from "@/config/DragDrop";
 // import { FooterCollections } from "@/config/strapi.config/footer.config";
 // import { BodyCollections } from "@/config/strapi.config/body.config";
 // import { HeaderCollections } from "@/config/strapi.config/header.config";
+// import { HeaderCollections } from "@/config/strapi.config/header.config";
 const TABS = ["header", "body", "footer", "productlist", "Productdetail"] as const;
 type Tab = (typeof TABS)[number];
 
