@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.main.d1tngp6p7622tv.amplifyapp.com [NC]
+RewriteRule ^(.*)$ http://main.d1tngp6p7622tv.amplifyapp.com/$1 [L,R=301]
