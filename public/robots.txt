@@ -1,3 +1,5 @@
 User-agent: *
-Disallow: 
 Disallow: /cgi-bin/
+Allow: /
+
+Sitemap: https://main.d1tngp6p7622tv.amplifyapp.com/sitemap.xml
