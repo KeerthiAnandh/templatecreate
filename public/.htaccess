@@ -1,3 +1,8 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www.main.d1tngp6p7622tv.amplifyapp.com [NC]
+# Ensure domain is non-www and redirects to the correct URL
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+# Redirect all traffic to the main domain (no www)
+RewriteCond %{HTTP_HOST} !^main\.d1tngp6p7622tv\.amplifyapp\.com$ [NC]
 RewriteRule ^(.*)$ http://main.d1tngp6p7622tv.amplifyapp.com/$1 [L,R=301]
