@@ -34,6 +34,7 @@ export default function RootLayout({
         />
 
         {/* SEO Meta Tags */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="title" content="E-commerce Template" />
         <meta
           name="description"
@@ -41,11 +42,12 @@ export default function RootLayout({
         />
         <meta
           name="keywords"
-          content="E-commerce, purchase, women dresses, men dresses"
+          content="e-commerce template, e-commerce template free download, free e-commerce template, styles e-commerce template free, website e-commerce template, e-commerce template free, nextjs e-commerce template, best e-commerce template, figma e-commerce template, react e-commerce template, ecommerce template github, ecommerce templates, e commerce app template, an example of e-commerce, ecommerce template buy, e-commerce banner templates, ecommerce design template, ecommerce front end template, e-commerce goods example, ecommerce home page template, react js ecommerce template, e commerce responsive template, figma ecommerce template mobile, template of ecommerce website, dynamic page ecommerce template, e commerce responsive template"
         />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
+        <link rel="canonical" href="https://main.d1tngp6p7622tv.amplifyapp.com/" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="Dynamic website" />
@@ -56,7 +58,7 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="http://localhost:3000/images/landing.png"
+          content="https://main.d1tngp6p7622tv.amplifyapp.com/images/landing.png"
         />
         <meta
           property="og:description"
@@ -72,19 +74,27 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="http://localhost:3000/images/landing.png"
+          content="https://main.d1tngp6p7622tv.amplifyapp.com/images/landing.png"
         />
 
         {/* JSON-LD Structured Data */}
         <script
+
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "http://www.schema.org",
-              "@type": "WebSite",
-              name: "E-commerce",
-              alternateName: "Purchase",
-              url: "https://main.d1tngp6p7622tv.amplifyapp.com/",
+              "@context": "https://schema.org",
+              "@type": "Product",
+              name: "Product Name",
+              image: "https://main.d1tngp6p7622tv.amplifyapp.com/images/product1.png",
+              description: "Short description of the product",
+              offers: {
+                "@type": "Offer",
+                priceCurrency: "USD",
+                price: "19.99",
+                itemCondition: "https://schema.org/NewCondition",
+                availability: "https://schema.org/InStock",
+              },
             }),
           }}
         />
