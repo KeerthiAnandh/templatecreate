@@ -58,11 +58,11 @@ export default function RootLayout({
         />
         <meta
           property="og:image"
-          content="https://main.d1tngp6p7622tv.amplifyapp.com/images/landing.png"
+          content="images/websitepic.jpg"
         />
         <meta
           property="og:description"
-          content="Users can modify the designs what they in website this feature is available in our e-commerce website."
+          content="Welcome to our homepage! Sign in or create an account to access exciting features and personalized services. Enjoy a seamless experience with easy navigation, secure sign-in, and quick access to all your favorite content. Join our community today!"
         />
 
         {/* Twitter Card Meta Tags */}
@@ -74,7 +74,7 @@ export default function RootLayout({
         />
         <meta
           name="twitter:image"
-          content="https://main.d1tngp6p7622tv.amplifyapp.com/images/landing.png"
+          content="images/websitepic.jpg"
         />
 
         {/* JSON-LD Structured Data */}
@@ -86,7 +86,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Product",
               name: "Product Name",
-              image: "https://main.d1tngp6p7622tv.amplifyapp.com/images/product1.png",
+              image: "images/websitepic.jpg",
               description: "Short description of the product",
               offers: {
                 "@type": "Offer",
