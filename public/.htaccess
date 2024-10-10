@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Block specific IP (e.g., 106.51.156.186)
+RewriteCond %{REMOTE_ADDR} ^106.51.156.186$
+RewriteRule ^ - [F,L]
+
 # Redirect non-www to www
 RewriteCond %{HTTP_HOST} ^main\.d1tngp6p7622tv\.amplifyapp\.com$ [NC]
 RewriteRule ^(.*)$ https://main.d1tngp6p7622tv.amplifyapp.com/$1 [L,R=301]
