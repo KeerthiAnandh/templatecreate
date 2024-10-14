@@ -39,7 +39,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="title" content="E-commerce" />
         <meta name="keywords" content="e-commerce template, e-commerce template free download, free e-commerce template, styles e-commerce template free, website e-commerce template, e-commerce template free, nextjs e-commerce template, best e-commerce template, figma e-commerce template, react e-commerce template, ecommerce template github, ecommerce templates, e commerce app template, an example of e-commerce, ecommerce template buy, e-commerce banner templates, ecommerce design template, ecommerce front end template, e-commerce goods example, ecommerce home page template, react js ecommerce template, e commerce responsive template, figma ecommerce template mobile, template of ecommerce website, dynamic page ecommerce template, e commerce responsive template, E-commerce Project Examples" />
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <link rel="canonical" href="https://main.d1tngp6p7622tv.amplifyapp.com/" />
