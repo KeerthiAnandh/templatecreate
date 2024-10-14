@@ -6,9 +6,9 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "E-commerce Template",
+  title: "Welcome to E-commerce Template",
   description:
-    "Sign in or create an account to enjoy a seamless experience with secure navigation and personalized services.",
+    "Welcome to inSign in or create an account to enjoy a seamless experience with secure navigation and personalized services.",
 };
 
 export default function RootLayout({
