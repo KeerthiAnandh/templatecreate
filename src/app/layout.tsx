@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "E-commerce Template",
-  description: "Welcome to our homepage! Sign in or create an account to access exciting features and personalized services. Enjoy a seamless experience with easy navigation, secure sign-in, and quick access to all your favorite content. Join our community today!",
+  description:
+    "Sign in or create an account to enjoy a seamless experience with secure navigation and personalized services.",
 };
 
 export default function RootLayout({
@@ -36,16 +37,9 @@ export default function RootLayout({
 
         {/* SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="title" content="E-commerce Template" />
-        <meta
-          name="description"
-          content="Welcome to our homepage! Sign in or create an account to access exciting features and personalized services. Enjoy a seamless experience with easy navigation, secure sign-in, and quick access to all your favorite content. Join our community today!"
-        />
-        <meta
-          name="keywords"
-          content="e-commerce template, e-commerce template free download, free e-commerce template, styles e-commerce template free, website e-commerce template, e-commerce template free, nextjs e-commerce template, best e-commerce template, figma e-commerce template, react e-commerce template, ecommerce template github, ecommerce templates, e commerce app template, an example of e-commerce, ecommerce template buy, e-commerce banner templates, ecommerce design template, ecommerce front end template, e-commerce goods example, ecommerce home page template, react js ecommerce template, e commerce responsive template, figma ecommerce template mobile, template of ecommerce website, dynamic page ecommerce template, e commerce responsive template, E-commerce Project Examples"
-        />
-        <meta name="robots" content="index, follow" />
+        <meta name="title" content="E-commerce" />
+        <meta name="keywords" content="e-commerce template, e-commerce template free download, free e-commerce template, styles e-commerce template free, website e-commerce template, e-commerce template free, nextjs e-commerce template, best e-commerce template, figma e-commerce template, react e-commerce template, ecommerce template github, ecommerce templates, e commerce app template, an example of e-commerce, ecommerce template buy, e-commerce banner templates, ecommerce design template, ecommerce front end template, e-commerce goods example, ecommerce home page template, react js ecommerce template, e commerce responsive template, figma ecommerce template mobile, template of ecommerce website, dynamic page ecommerce template, e commerce responsive template, E-commerce Project Examples" />
+        <meta name="robots" content="noindex" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <link rel="canonical" href="https://main.d1tngp6p7622tv.amplifyapp.com/" />
@@ -53,17 +47,11 @@ export default function RootLayout({
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="Dynamic website" />
         <meta property="og:title" content="E-commerce Website" />
-        <meta
-          property="og:url"
-          content="https://main.d1tngp6p7622tv.amplifyapp.com/"
-        />
-        <meta
-          property="og:image"
-          content="images/websitepic.jpg"
-        />
+        <meta property="og:url" content="https://main.d1tngp6p7622tv.amplifyapp.com/" />
+        <meta property="og:image" content="images/websitepic.jpg" />
         <meta
           property="og:description"
-          content="Welcome to our homepage! Sign in or create an account to access exciting features and personalized services. Enjoy a seamless experience with easy navigation, secure sign-in, and quick access to all your favorite content. Join our community today!"
+          content="Sign in or create an account to enjoy a seamless experience with secure navigation and personalized services."
         />
 
         {/* Twitter Card Meta Tags */}
@@ -73,14 +61,10 @@ export default function RootLayout({
           name="twitter:site"
           content="https://main.d1tngp6p7622tv.amplifyapp.com/"
         />
-        <meta
-          name="twitter:image"
-          content="images/websitepic.jpg"
-        />
+        <meta name="twitter:image" content="images/websitepic.jpg" />
 
         {/* JSON-LD Structured Data */}
         <script
-
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -99,22 +83,22 @@ export default function RootLayout({
             }),
           }}
         />
-        {/* bing webmaster tool */}
-        {/* <!-- Clarity tracking code for https://main.d1tngp6p7622tv.amplifyapp.com/ --> */}
+
+        {/* Bing Webmaster Tool */}
         <Script id="clarity" strategy="lazyOnload">
-        {`
-          (function(c, l, a, r, i, t, y) {
-            c[a] = c[a] || function () {
-              (c[a].q = c[a].q || []).push(arguments);
-            };
-            t = l.createElement(r);
-            t.async = 1;
-            t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
-            y = l.getElementsByTagName(r)[0];
-            y.parentNode.insertBefore(t, y);
-          })(window, document, "clarity", "script", "ogcahg8txm");
-        `}
-      </Script>
+          {`
+            (function(c, l, a, r, i, t, y) {
+              c[a] = c[a] || function () {
+                (c[a].q = c[a].q || []).push(arguments);
+              };
+              t = l.createElement(r);
+              t.async = 1;
+              t.src = "https://www.clarity.ms/tag/" + i + "?ref=bwt";
+              y = l.getElementsByTagName(r)[0];
+              y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "ogcahg8txm");
+          `}
+        </Script>
       </head>
       <body className={inter.className}>{children}</body>
     </html>
