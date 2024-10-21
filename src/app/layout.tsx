@@ -42,7 +42,7 @@ export default function RootLayout({
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-        <link rel="canonical" href="https://main.d1tngp6p7622tv.amplifyapp.com/" />
+        <meta name="msvalidate.01" content="B9928E316AA5A95CE869F0867A74919E" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="Dynamic website" />
