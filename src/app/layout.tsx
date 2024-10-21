@@ -22,7 +22,7 @@ export default function RootLayout({
         {/* Google Tag (gtag.js) */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-N662GF4B3Z"
+          src="https://www.googletagmanager.com/gtag/js?id=-N662GF4B3Z"
         ></script>
         <script
           dangerouslySetInnerHTML={{
@@ -30,7 +30,7 @@ export default function RootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-N662GF4B3Z');
+              gtag('config', 'G-N662GF4B3Z');    
             `,
           }}
         />
@@ -75,7 +75,7 @@ export default function RootLayout({
               description: "Short description of the product",
               offers: {
                 "@type": "Offer",
-                priceCurrency: "USD",
+                priceCurrency: "Rupees",
                 price: "19.99",
                 itemCondition: "https://schema.org/NewCondition",
                 availability: "https://schema.org/InStock",
@@ -85,7 +85,7 @@ export default function RootLayout({
         />
 
         {/* Bing Webmaster Tool */}
-        <Script id="clarity" strategy="lazyOnload">
+        <Script id="" strategy="lazyOnload">
           {`
             (function(c, l, a, r, i, t, y) {
               c[a] = c[a] || function () {
