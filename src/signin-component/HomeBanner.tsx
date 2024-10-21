@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { BackButton, ButtonGroup, Container, SignInButton, SignUpButton } from './HomeBanner.style';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import Link from 'next/link';
 
 const Homebanner = () => {
   const [showForm, setShowForm] = useState<null | 'signIn' | 'signUp'>(null);
@@ -10,11 +11,6 @@ const Homebanner = () => {
     const lastPage = localStorage.getItem('lastPage') as 'signIn' | 'signUp' | null;
     setShowForm(lastPage);
   }, []);
-
-  const handleShowForm = (page: 'signIn' | 'signUp') => {
-    setShowForm(page);
-    localStorage.setItem('lastPage', page);
-  };
 
   const handleBack = () => {
     setShowForm(null);
@@ -26,12 +22,16 @@ const Homebanner = () => {
       {showForm === null && <h1>Welcome to Our Homepage</h1>}
       {showForm === null ? (
         <ButtonGroup>
-          <SignInButton onClick={() => handleShowForm('signIn')} variant={'text'}>
-            Sign In
-          </SignInButton>
-          <SignUpButton onClick={() => handleShowForm('signUp')} variant={'text'}>
-            Sign Up
-          </SignUpButton>
+          <Link href="/login" passHref>
+            <SignInButton variant={'text'}>
+              Sign In
+            </SignInButton>
+          </Link>
+          <Link href="/signup" passHref>
+            <SignUpButton variant={'text'}>
+              Sign Up
+            </SignUpButton>
+          </Link>
         </ButtonGroup>
       ) : (
         <div>

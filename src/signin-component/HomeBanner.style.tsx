@@ -30,7 +30,7 @@ export const SignInButton = styled(UiButton)`
   }
 `;
 
-export const SignUpButton = styled(MuiButton)`
+export const SignUpButton = styled(UiButton)`
   background-color: #43a047;
   color: white;
   &:hover {
@@ -38,7 +38,7 @@ export const SignUpButton = styled(MuiButton)`
   }
 `;
 
-export const BackButton = styled(MuiButton)`
+export const BackButton = styled(UiButton)`
   border-color: #1976d2;
   color: #1976d2;
   &:hover {

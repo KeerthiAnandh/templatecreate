@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Welcome to E-commerce Template",
   description:
-    "Welcome to inSign in or create an account to enjoy a seamless experience with secure navigation and personalized services.",
+    "Welcome to inSign in or create an account to Shop the latest trends with secure checkout and personalized services on our e-commerce platform. Sign in to enjoy exclusive offers.",
 };
 
 export default function RootLayout({
@@ -43,7 +43,7 @@ export default function RootLayout({
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="msvalidate.01" content="B9928E316AA5A95CE869F0867A74919E" />
-
+        
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="Dynamic website" />
         <meta property="og:title" content="E-commerce Website" />
