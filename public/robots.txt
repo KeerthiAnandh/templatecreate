@@ -2,4 +2,4 @@ User-agent: *
 Disallow: 
 Allow: /
 
-Sitemap: https://main.d1tngp6p7622tv.amplifyapp.com/sitemap.xml
+
