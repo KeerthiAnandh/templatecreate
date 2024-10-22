@@ -1,5 +1,9 @@
 User-agent: *
-Disallow: 
-Allow: /
+js
+tsx
+css
+Allow: /login
+Allow: /signup
+Allow: /temp
 
-
+sitemap:https://main.d1tngp6p7622tv.amplifyapp.com/sitemap.xml

@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Welcome to E-commerce Template",
   description:
-    "Welcome to inSign in or create an account to Shop the latest trends with secure checkout and personalized services on our e-commerce platform. Sign in to enjoy exclusive offers.",
+    "Sign in or create an account to shop the latest trends. Enjoy secure checkout, personalized services, and exclusive offers on our platform.",
 };
 
 export default function RootLayout({
@@ -37,13 +37,13 @@ export default function RootLayout({
 
         {/* SEO Meta Tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="title" content="E-commerce" />
+        <meta name="title" content="E-commerce " />
         <meta name="keywords" content="e-commerce template, e-commerce template free download, free e-commerce template, styles e-commerce template free, website e-commerce template, e-commerce template free, nextjs e-commerce template, best e-commerce template, figma e-commerce template, react e-commerce template, ecommerce template github, ecommerce templates, e commerce app template, an example of e-commerce, ecommerce template buy, e-commerce banner templates, ecommerce design template, ecommerce front end template, e-commerce goods example, ecommerce home page template, react js ecommerce template, e commerce responsive template, figma ecommerce template mobile, template of ecommerce website, dynamic page ecommerce template, e commerce responsive template, E-commerce Project Examples" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="msvalidate.01" content="B9928E316AA5A95CE869F0867A74919E" />
-        
+
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="Dynamic website" />
         <meta property="og:title" content="E-commerce Website" />
@@ -51,7 +51,7 @@ export default function RootLayout({
         <meta property="og:image" content="images/websitepic.jpg" />
         <meta
           property="og:description"
-          content="Sign in or create an account to enjoy a seamless experience with secure navigation and personalized services."
+          content="Sign in or create an account to shop the latest trends. Enjoy secure checkout, personalized services, and exclusive offers on our platform."
         />
 
         {/* Twitter Card Meta Tags */}
