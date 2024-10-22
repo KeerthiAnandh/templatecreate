@@ -75,7 +75,7 @@ export default function RootLayout({
               description: "Short description of the product",
               offers: {
                 "@type": "Offer",
-                priceCurrency: "Rupees",
+                priceCurrency: "INR",
                 price: "19.99",
                 itemCondition: "https://schema.org/NewCondition",
                 availability: "https://schema.org/InStock",
