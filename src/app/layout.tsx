@@ -6,7 +6,7 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Welcome to E-commerce Template",
+  title: "Welcome to Gen-com Template",
   description:
     "Sign in or create an account to shop the latest trends. Enjoy secure checkout, personalized services, and exclusive offers on our platform.",
 };
@@ -36,9 +36,9 @@ export default function RootLayout({
         />
 
         {/* SEO Meta Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="title" content="E-commerce " />
-        <meta name="keywords" content="e-commerce template, e-commerce template free download, free e-commerce template, styles e-commerce template free, website e-commerce template, e-commerce template free, nextjs e-commerce template, best e-commerce template, figma e-commerce template, react e-commerce template, ecommerce template github, ecommerce templates, e commerce app template, an example of e-commerce, ecommerce template buy, e-commerce banner templates, ecommerce design template, ecommerce front end template, e-commerce goods example, ecommerce home page template, react js ecommerce template, e commerce responsive template, figma ecommerce template mobile, template of ecommerce website, dynamic page ecommerce template, e commerce responsive template, E-commerce Project Examples" />
+        <meta name="viewport" content="width= -width, initial-scale=1.0" />
+        <meta name="title" content="Gen-com Template" />
+        <meta name="keywords" content="Gen-com template, Gen-com template free download, free Gen-com template, styles Gen-com template free, website Gen-com template, Gen-com template free, nextjs Gen-com template, best Gen-com template, figma Gen-com template, react Gen-com template, Gencom template github, Gencom templates, Gen com app template, an example of Gen-com, Gencom template buy, Gen-com banner templates, Gencom design template, Gencom front end template, Gen-com goods example, Gencom home page template, react js Gencom template, Gen com responsive template, figma Gencom template mobile, template of Gencom website, dynamic page Gencom template, Gen com responsive template, Gen-com Project Examples" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
@@ -46,7 +46,7 @@ export default function RootLayout({
 
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="Dynamic website" />
-        <meta property="og:title" content="E-commerce Website" />
+        <meta property="og:title" content="Gen-com Website" />
         <meta property="og:url" content="https://main.d1tngp6p7622tv.amplifyapp.com/" />
         <meta property="og:image" content="images/websitepic.jpg" />
         <meta
@@ -55,8 +55,8 @@ export default function RootLayout({
         />
 
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="E-commerce" />
-        <meta name="twitter:title" content="E-commerce website" />
+        <meta name="twitter:card" content="Gen-com" />
+        <meta name="twitter:title" content="Gen-com website" />
         <meta
           name="twitter:site"
           content="https://main.d1tngp6p7622tv.amplifyapp.com/"
