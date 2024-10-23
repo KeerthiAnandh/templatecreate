@@ -37,8 +37,8 @@ export default function RootLayout({
 
         {/* SEO Meta Tags */}
         <meta name="viewport" content="width= -width, initial-scale=1.0" />
-        <meta name="title" content="Gen-com Template" />
-        <meta name="keywords" content="Gen-com template, Gen-com template free download, free Gen-com template, styles Gen-com template free, website Gen-com template, Gen-com template free, nextjs Gen-com template, best Gen-com template, figma Gen-com template, react Gen-com template, Gencom template github, Gencom templates, Gen com app template, an example of Gen-com, Gencom template buy, Gen-com banner templates, Gencom design template, Gencom front end template, Gen-com goods example, Gencom home page template, react js Gencom template, Gen com responsive template, figma Gencom template mobile, template of Gencom website, dynamic page Gencom template, Gen com responsive template, Gen-com Project Examples" />
+        <meta name="title" content="gencom Template" />
+        <meta name="keywords" content="gencom template, gencom template free download, free gencom template, styles gencom template free, website gencom template, gencom template free, nextjs gencom template, best gencom template, figma gencom template, react gencom template, Gencom template github, Gencom templates, Gen com app template, an example of gencom, Gencom template buy, gencom banner templates, Gencom design template, Gencom front end template, gencom goods example, Gencom home page template, react js Gencom template, Gen com responsive template, figma Gencom template mobile, template of Gencom website, dynamic page Gencom template, Gen com responsive template, gencom Project Examples" />
         <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
@@ -46,7 +46,7 @@ export default function RootLayout({
 
         {/* Open Graph Meta Tags */}
         <meta property="og:type" content="Dynamic website" />
-        <meta property="og:title" content="Gen-com Website" />
+        <meta property="og:title" content="gencom Website" />
         <meta property="og:url" content="https://main.d1tngp6p7622tv.amplifyapp.com/" />
         <meta property="og:image" content="images/websitepic.jpg" />
         <meta
@@ -55,8 +55,8 @@ export default function RootLayout({
         />
 
         {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="Gen-com" />
-        <meta name="twitter:title" content="Gen-com website" />
+        <meta name="twitter:card" content="gencom" />
+        <meta name="twitter:title" content="gencom website" />
         <meta
           name="twitter:site"
           content="https://main.d1tngp6p7622tv.amplifyapp.com/"
